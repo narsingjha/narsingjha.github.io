@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Radabs</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<style>
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	background: #f2f0eb url(images/content-bg.jpg);
+	font: 16px Helvetica, Arial, Sans-Serif; color: #636363; line-height: 24px;
+}
+
+#container {
+	width: 960px; margin: 0 auto;
+}
+
+/* #logo {
+	margin: 10px auto 0 auto; position: relative; width: 183px;
+} */
+
+ul#nav {
+	width: 940px; list-style: none;  overflow: hidden; margin: 40px auto 25px auto; /*  */
+}
+	ul#nav li {
+		float: left; width: 126px; height: 33px; padding: 14px 30px;
+		background: url(images/content-bg.jpg);
+		font-weight: bold; text-align: center; /* text-transform: uppercase; */
+	}
+/*
+		ul#nav li:nth-child(1) {
+			margin: 0 60px 0 0;
+		}
+		ul#nav li:nth-child(2) {
+			margin: 0 316px 0 0;
+		}
+		ul#nav li:nth-child(3) {
+			margin: 0 60px 0 0;
+		}
+		ul#nav li:nth-child(4) {
+			margin: 0;
+		} */
+
+		ul#nav li a {
+			color: #616369; text-decoration: none;
+		}
+			ul#nav li a:hover {
+				color: #0000ff;
+			} 
+#header {
+	height: 244px; padding: 52px 0 0 57px;
+	background: url(images/content-bg.jpg);
+}
+
+	#header h1 {
+		font: 38px Georgia, Serif;  letter-spacing: 2px; margin: 0 0 20px 0; /* color: #f2f0eb; white */
+		/* text-shadow: 0px 3px 3px #494949;*/
+	}
+	#header h2 {
+		width: 900px; font: 20px Georgia, Serif; letter-spacing: 2px; margin: 0 0 20px 0; /* color: #f2f0eb; white */
+		/* text-shadow: 0px 3px 3px #494949; */
+	}
+	#header p.btn a {
+		display: block; width: 150px; height: 50px; /* overflow: hidden; */
+		background: url(images/cv.jpg); text-indent: -9999px;
+	}
+
+#content {
+	background: url(images/content-bg.jpg) repeat-y;
+	padding: 57px 69px 50px 69px; overflow: hidden;font-size:14px;
+}
+	#content h2 {
+		font: 30px Georgia, Serif; letter-spacing: 2px; margin: 0 0 20px 0;
+	}
+
+	#content h3 {
+		font: 26px Georgia, Serif; letter-spacing: 2px; margin: 0 0 20px 0;
+	}
+	
+	#content p {
+		margin: 0 0 30px 0;
+	}	
+
+	#content p.big {
+		line-height: 800%;
+	}
+
+	#content a {
+		color: #a12121; text-decoration: none;
+	}
+		#content a:hover {
+			color: #671111;
+		}
+	
+#content .portfolio-item {
+	width: 250px; height: 160px; padding: 4px; background: #eee; text-align: center;
+	float: left; margin: 0 7px 14px 7px;
+}
+	#content .portfolio-item p.btn {
+		margin: 0;
+	}
+	#content .portfolio-item p.btn a {
+		display: block; width: 250px; height: 58px; padding: 7px 0 0 0; font-size: 12px;
+/*		background: url(images/checkit.jpg); */
+		font-weight: bold; text-align: center; /* text-transform: uppercase; */
+		text-decoration: none;
+	}
+
+#footer {
+	background: url(images/content-bg.jpg) no-repeat; padding: 40px 0 0 0;
+	overflow: hidden; margin: 0 0 30px 0;
+}
+	#footer p#copyright {
+		font-size: 12px; float: left; margin: 0 0 0 30px; color: #b8b6b2;
+	}
+	#footer p#back-top {
+		font-size: 12px; float: right; margin: 0 30px 0 0;
+	}
+	#footer p {
+		font-size: 11px;
+}
+		#footer a {
+		color: #0000ff; text-decoration: none;
+	}
+		#footer a:hover {
+			color: #671111;
+		}
+</style>
+</head>
+
+<body>
+	<div id="container">
+
+		<ul id="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="others.html">Other Interests</a></li>
+			<!-- <li><a href="contact.html">Contact</a></li> -->
+		</ul>
+		<div id="content">	
+		<p>	Community Atmosphere Model (CAM) is a widely used open-source software used by atmospheric scientists for 				simulation of earth's atmosphere. It is developed and maintained by the National Center for Atmospheric 			Research (NCAR), and is a part of the complete Community Earth System Model (CESM). CAM has two main 				components - Physics and Dynamics. Physics has several routines, including shortwave radiations, longwave 				radiations, deep and shallow convections, and stratiform clouds etc. In this project, we improve the 				performance of one of the most time consuming physics routine called radabs. Radabs is a part of the longwave 				radiation routines. 
+		</p>
+		<p>	CAM routines belong to different timescales (sometimes due to the computational intensity of the routines), 				eg, (by default) execution of shortwaves routines is done every 1-hr of the simulation time, convection 			routines executed every 30-min of the simulation time. Radabs is executed every 12-hr of the simulation time. 				We exploit this fact in our asynchronous model. In this model, we perform inter timestep asynchronous 				calculation of the radabs routines (ie, results of current timestep used in the next timestep). This also 				allows us to perform radabs more frequently (which should originally have been the case, giving better 				simulations). This model provides significant performance gains in the radiation calculations, but the errors 				induced are notable, thus motivating us to come up with a model to decrease these errors, still providing 				reasonable performance improvements. 
+		</p>
+		<p> 	We then explore our synchronous model, wherein radabs is executed asynchronously, but in the same timestep. 
+			This involved early computation and rearrangement of several radiation routines, careful synchronization of 				the threads, and performing extra computation in order to decrease the memory footprint. This model provides 				much lesser errors, but it induces higher waiting time. To reduce this waiting time, we then perform two 				optimizations of the radabs routines. Major bottlenecks in radabs were two large, non-vectorized loops and a 				lot of transcendental functions. We performed the vectorization of the two loops using several techniques 				like loop fission, using MKL functions etc. We also replaced several transcendental functions with their 				approximations which were less intensive (although they further added to the error). 
+		</p>
+		<p> 	The manuscript for this work has been accepted in the Journal of Parallel and Distributed Computing. </p>
+		</div>
+		
+		<div id="footer">
+			<!-- <p id="copyright">&copy; Amlesh Kashyap </p> -->
+			<p id="back-top"><a href="http://www.digg.com/">Digg</a></p>
+		</div>
+	
+	</div>
+</body>
