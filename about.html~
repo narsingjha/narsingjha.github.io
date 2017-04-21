@@ -126,8 +126,8 @@ ul#nav {
 		<div id="content">
 			<h3>Education</h3> 
 	
-				a. Bachelor of Technology (2011-2015) - <a href="http://www.nitp.ac.in">National Institute of 					Technology, Patna</a><br>
-				b. Class X, XII (2009, 2011) - <a href="http://www.davschoolkhagaul.org/">D.A.V. Public School, 				Khagaul
+				a. Bachelor of Technology (2005-2009) - <a href="LINK">College</a><br>
+				b. Class X, XII (2009, 2011) - <a href="http://LINK">School
 				</a><br>
 		<br><br>
 
@@ -137,9 +137,7 @@ ul#nav {
 				<a href="http://mars.serc.iisc.ernet.in/">Middleware and Runtime Systems Laboratory</a> - related 
 				<a href="radabs_async_sync.html">project 1</a> 
 				<a href="radiations_cam5.html">project 2</a> <a href="gcharm.html">project 3</a> <br>
-				b. Summer Student (June 2016) - 
-				<a href="https://www.microsoft.com/en-us/research/event/msr-india-summer-school-2016-on-iot/"> 					Microsoft Research, Indian Institute of Science</a> - related 
-				<a href="summer_iot_project.html">project</a>
+
 				<br>c. Summer Intern (May-July 2014) - 
 				<a href="http://www.mecheng.iisc.ernet.in/~gtom/#research">Multiphase Flow Simulations Laboratory</a> 					- related <a href="summer_parallelization.html">project</a>		
 				<br>d. Summer Trainee (June 2013) - <a href="http://hpesindia.com/summer-training-program.html">HP 					Education Services</a> - related <a href="summer_hpes.html">project</a> 		</span>
@@ -148,12 +146,11 @@ ul#nav {
 		
 
 		<div id="footer">
-			<!-- <p id="copyright">&copy; Amlesh Kashyap </p> 
+			<!-- <p id="copyright">&copy; Amlesh Kashyap </p> -->
 			<p id="back-top"><a href="http://www.csrankings.org">Top Research Universities in CS</a></p>
 			<p>Education is an admirable thing. But it is well to remember from time to time that nothing that is worth 				knowing can be taught.</p>
 			<p>-- Oscar Wilde</p>
 		</div>
 	
 	</div>
--->
 </body>
