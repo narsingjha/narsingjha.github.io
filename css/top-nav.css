@@ -1,0 +1,14 @@
+body {
+  min-height: 75rem;
+  padding-top: 1.5rem;
+}
+
+.navbar {
+  background-color: #008080;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: normal;
+  background-color: transparent;
+}
